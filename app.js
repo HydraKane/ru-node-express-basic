@@ -26,7 +26,7 @@ io.on('connection', function(client) {
 })
 
 //server.listen(4200);
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4200;
 //app.listen(port);
 server.listen(port);
 console.log('Server listening at port ' + port);
