@@ -18,11 +18,15 @@ io.on('connection', function(client) {
 	    });
 
     client.on('messages', function(data) {
-		client.emit('broad', data);
+		client.emit('broad', 'received:'+data);
 //		client.broadcast.emit('broad',data);
            //client.broadcast.emit('broad',data);
     });
 
 })
 
-server.listen(4200);
+//server.listen(4200);
+var port = process.env.PORT || 3000;
+//app.listen(port);
+server.listen(port);
+console.log('Server listening at port ' + port);
