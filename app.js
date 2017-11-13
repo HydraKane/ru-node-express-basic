@@ -13,9 +13,9 @@ app.get('/', function(req,res){
 	});
 });
 
-//app = undefined;
+var port = process.env.PORT || 3000;
 
-app.listen(3000);
-console.log('Server listening at localhost:3000');
+app.listen(port);
+console.log('Server listening at port ' + port);
 
 
